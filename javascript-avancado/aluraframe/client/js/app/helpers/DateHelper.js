@@ -11,7 +11,7 @@ class DateHelper {
     //Métodos státicos
     static dataParaTexto(data) {
         //TEMPLATE STRINGS Super Power
-        return `${data.getDate()}/ ${data.getMonth()+1}/${data.getFullYear()}`;  
+        return `${data.getDate()}/${data.getMonth()+1}/${data.getFullYear()}`;  
 
     }
 
