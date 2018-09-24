@@ -8,9 +8,19 @@ body {
 	margin: 0 auto;
 }
 
+.cabecalhoPrincipal-nav {
+	display: flex;
+}
+
 .cabecalhoPrincipal {
 	background-color: #FFF;
 	padding: 20px 0;
+}
+
+.cabecalhoPrincipal .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .cabecalhoPrincipal-titulo {
@@ -134,6 +144,23 @@ body {
 	padding: 20px 0;
 }
 
+.rodapePrincipal-patrocinadores .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.rodapePrincipal-patrocinadores-list {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 70%;
+}
+
+.rodapePrincipal-patrocinadores-list li{
+	padding: 0 20px;
+}
+
 .rodapePrincipal-contatoForm {
 	margin-top: 20px;
 	text-align: center;
@@ -159,7 +186,10 @@ body {
 	background-color: #4DBA7A;
 	color: #FFF;
 	cursor: pointer;
-	
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+	display: flex;
 }
 
 .rodapePrincipal-contatoForm-submit,
