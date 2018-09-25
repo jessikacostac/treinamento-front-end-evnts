@@ -133,6 +133,26 @@ body {
 	margin-top: 0;
 }
 
+.rodapePrincipal-navMap-list {
+	display: flex;
+	height: 250px;
+	flex-flow: column wrap;
+	/* flex-direction: column; 
+		flex-wrap: wrap; */	
+}
+
+.conteudoPrincipal-cursos {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.conteudoPrincipal-cursos-link {
+	width: 23%;
+	margin: 2%;
+
+}
+
 .navmap-list-title-bancoDeDados { color: #EC6E5A; border-left: 4px solid #EC6E5A; }
 .navmap-list-title-framework { color: #AD85BF; border-left: 4px solid #AD85BF; }
 .navmap-list-title-frontend { color: #5EC6F3; border-left: 4px solid #5EC6F3; }
@@ -208,10 +228,15 @@ body {
 
 .videoSobre-video {
 	max-width: 100%;
+	flex-grow: 1;
+	flex-shrink: 2;
 }
 
 .videoSobre .container {
 	color: #FFF;
+	/* display: flex;
+	justify-content: space-between;
+	align-items: baseline; */
 }
 
 .videoSobre-sobre-title {
@@ -222,6 +247,14 @@ body {
 .videoSobre-sobre {
 	font-size: 1.3em;
 	line-height: 2;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 2;
+}
+
+.videoSobre-sobre-list {
+	flex-grow: 1;
 }
 
 .videoSobre-button {
@@ -233,6 +266,7 @@ body {
 	height: 50px;
 	font-size: .8em;
 	outline: none;
+	width: 100%;
 }
 
 .rodapePrincipal-contatoForm-legend {
@@ -271,6 +305,8 @@ body {
 		width: auto;
 		margin: 0 0 0 10px;
 	}
+
+	
 
 	.rodapePrincipal-contatoForm {
 		margin-top: 0;
@@ -311,6 +347,12 @@ body {
 	.videoSobre-sobre {
 		margin-left: 1.5em;
 	}
+
+}
+
+
+.videoSobre .container {
+    display: flex;
 
 }
 
