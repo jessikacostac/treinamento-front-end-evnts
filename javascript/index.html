@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <input class="frase"><button class="botao">Copiar</button><p class="copia"></p>
+        </section>
+    </main>
+
+    <script>
+        let input = document.querySelector(".frase")
+        let button = document.querySelector(".botao")
+
+        button.addEventListener('click', function(event){
+            event.preventDefault()
+            let valor = input.value
+            let copia = document.querySelector(".copia")
+            copia.textContent = input.value
+            input.value = ""
+
+            console.log(valor)
+     
+        })
+    
+    </script>
+</body>
+</html>
