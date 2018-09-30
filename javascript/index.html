@@ -11,8 +11,20 @@
     <header></header>
     <main>
         <section>
-            <input class="frase"><button class="botao">Copiar</button><p class="copia"></p>
+            <input class="frase"><button class="botao">Copiar</button><h1 class="copia"></h1>
         </section>
+
+        <ul class="afazeres">
+            <li>Ir ao médico</li>
+            <li>Trocar a senha do Wifi</li>
+            <li>Estudar Javascript</li>
+        </ul>
+        <form class="adicionar-tarefa">
+            <input type="text" name="tarefa">
+            <button id="botao-adicionar">Salvar</button>
+        </form>
+
+        <h2 class="item"></h2>
     </main>
 
     <script>
@@ -26,9 +38,17 @@
             copia.textContent = input.value
             input.value = ""
 
-            console.log(valor)
-     
+            console.log(valor)     
         })
+
+        var form = document.querySelector('.adicionar-tarefa');
+        var botao = document.querySelector('#botao-adicionar');
+        var item =  document.querySelector('.item');
+        botao.addEventListener("click", function(event){
+            event.preventDefault()
+            item.textContent = form.tarefa.value
+            //Código para adicionar na lista de tarefas
+        });
     
     </script>
 </body>
