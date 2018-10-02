@@ -59,15 +59,15 @@
         </tfoot>
     </table>
     <!-- Importar a classe negociação -->
-    <script src="./js/app/models/negociacao.js"></script>
+    <script src="./js/app/models/Negociacao.js"></script>
     <script>
-        var n1 = new Negociacao();
-        n1.quantidade = 10;
-        console.log(n1);
+        var n1 = new Negociacao(new Date(), 5, 700);
+        n1._quantidade = 10;
+        console.log(n1.getQuantidade());
+        console.log(n1.getData());
+        console.log(n1.getValor());
+        console.log(n1.getVolume());
 
-        var n2 = new Negociacao();
-        n2.quantidade = 20;
-        console.log(n2);
 
     </script>
 </body>
