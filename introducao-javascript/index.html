@@ -20,7 +20,6 @@
 				<h2>Meus pacientes</h2>
 				<label for="filtrar-tabela">Filtre:</label>
 				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente">
-				<span id="erro-ajax" class="invisivel">Erro ao buscar os pacientes</span>
 				<table>
 					<thead>
 						<tr>
@@ -72,13 +71,15 @@
 						</tr>
 					</tbody>
 				</table>
+				<span id="erro-ajax" class="invisivel">Erro ao buscar os pacientes</span>
+
+				<button id="buscar-pacientes" class="botao bto-principal">Buscar Pacientes</button>
 
 			</section>
 		</main>
 
 		<section class="container">
-				<button id="buscar-pacientes">Buscar paciente</button>
-			<h2 id="titulo-form">Adicionar novo paciente</h2>
+		    <h2 id="titulo-form">Adicionar novo paciente</h2>
 			<ul id="mensagens-erro"></ul>
 		    <form id="form-adiciona">
 		        <div class="">

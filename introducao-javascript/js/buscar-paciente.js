@@ -5,32 +5,35 @@
 var botaoAdicionar = document.querySelector("#buscar-pacientes");
 
 botaoAdicionar.addEventListener("click", function() {
-
     var xhr = new XMLHttpRequest();
 
     xhr.open("GET", "https://api-pacientes.herokuapp.com/pacientes");
 
     xhr.addEventListener("load", function() {
         var erroAjax = document.querySelector("#erro-ajax");
-        if(xhr.status == 200) {
-            // var erroAjax = document.querySelector("#erro-ajax");
+
+        if (xhr.status == 200) {
             erroAjax.classList.add("invisivel");
-            // console.log(xhr.responseText); //retorna uma string JSON
-
-            var resposta =  xhr.responseText;
-
-            var pacientes =  JSON.parse(resposta);
+            var resposta = xhr.responseText; //retorna uma string JSON
+            var pacientes = JSON.parse(resposta); //transforma em um objeto
 
             //iterar o array - "Para cada paciente você pega esse paciente e chama a função anônima e chama a função 'adicionaPaciente'"
-            pacientes.forEach( function(paciente){
+            pacientes.forEach(function(paciente) {
                 adicionaPacienteNaTabela(paciente);
             });
-        }else{
-            console.log(xhr.status);
-            console.log(xhr.responseText);
+        } else {
             erroAjax.classList.remove("invisivel");
         }
     });
 
     xhr.send();
 });
+
+// Como fazer uma requisição assíncrona com o Javascript
+// O objeto XMLHttpRequest
+// Como configurar e enviar uma requisição
+// O evento de load
+// O que é a técnica AJAX.
+// O formato JSON
+// Como converter JSON para um objeto Javascript com a função JSON.parse()
+// Como lidar com erros durante o AJAX
