@@ -63,11 +63,19 @@
     <script>
         var n1 = new Negociacao(new Date(), 5, 700);
 
-        console.log(n1.quantidade);
-        console.log(n1.qata);
-        console.log(n1.valor);
-        console.log(n1.volume);
+        console.log(Object.isFrozen(n1)); //tá congelado? -  falso
+        Object.freeze(n1); //true
+
+        // console.log(n1.data);
+
+        //ES6
+        //LET -> Escopo de bloco -  só existem nos blocos onde foram declaradas
+        //Evita vazamento de memória fora do escopo
+        
+
 
     </script>
+
+
 </body>
 </html>
