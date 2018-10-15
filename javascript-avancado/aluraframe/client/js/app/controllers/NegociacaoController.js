@@ -1,9 +1,11 @@
+//Criando o primeiro "Controller" da aplicação
 class NegociacaoController {
 
     constructor() {
 
         //Otimização do código
         //Atribuimos ao $ querySelector para não precisar reescrevar toda vez que precisar acessar o elemento
+        //Capturando os valores dos elementos
         let $ = document.querySelector.bind(document);
         this._inputData = $('#data');
         this._inputQuantidade =  $('#quantidade');
@@ -13,12 +15,19 @@ class NegociacaoController {
     adiciona(event) {
 
         event.preventDefault();
-        // alert('Chamei ação no controller');
+        
+        let negociacao = new Negociacao(
+            DateHelper.textoParaData(this._inputData.value),
+            this._inputQuantidade.value,
+            this._inputValor.value
+            );
 
-        console.log(this._inputData.value);
-        console.log(this._inputQuantidade.value);
-        console.log(this._inputValor.value);
+
+        console.log(negociacao);
+
+        console.log(DateHE.dataParaTexto(negociacao.data));
     }
+
   }
 
         //Forma antiga de acessar os inputs

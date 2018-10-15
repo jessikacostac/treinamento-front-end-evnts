@@ -34,11 +34,11 @@ class Negociacao {
 
     var n1 = new Negociacao(new Date(), 5, 700);
 
-    console.log(Object.isFrozen(n1)); //tá congelado? -  falso
-    console.log(Object.freeze(n1)); //true
-    console.log(n1);
+    //console.log(Object.isFrozen(n1)); //tá congelado? -  falso
+    //console.log(Object.freeze(n1)); //true
+    //console.log(n1);
 
-    console.log(n1.data);
+    //console.log(n1.data);
 
     //ES6
     //LET -> Escopo de bloco -  só existem nos blocos onde foram declaradas
