@@ -10,16 +10,19 @@ class DateHelper {
 
     //Métodos státicos
     static dataParaTexto(data) {
-        //TEMPLATE STRINGS
+        //TEMPLATE STRINGS Super Power
         return `${data.getDate()}/ ${data.getMonth()+1}/${data.getFullYear()}`;  
 
     }
 
     static textoParaData(texto) {
-        
-        //Expressão regular
-        if(/\d{4}-\d{2}-\d{2}/.test(texto)) 
-            throw new Error("Deve estra no formato aaaa-mm-dd");
+        //failed fast - erra rápido*
+        //Expressão regular é regex????????***************
+        //(/\--"todo mundo que é digito \d" (D maiúsculo é qualquer coisa diferente de número)--d{4} --"tem que ter 4 digitos"-- -\d{2}-\d{2}/.test(texto) "testa se este texto segue o padrão"
+
+        if(!/\d{4}-\d{2}-\d{2}/.test(texto)) 
+        //se o retorno da expressão for false retorne>>
+            throw new Error("Data deve estar no formato aaaa-mm-dd");
 
         return new Date(...texto.split('-').map((item, indice) => item - indice % 2));
 
