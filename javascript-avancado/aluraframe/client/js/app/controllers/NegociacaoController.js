@@ -6,7 +6,6 @@ class NegociacaoController {
         //Otimização do código
         //Atribuimos ao $ querySelector para não precisar reescrevar toda vez que precisar acessar o elemento
         //Capturando os valores dos elementos
-
         //Atributos
         let $ = document.querySelector.bind(document);
         this._inputData = $('#data');
@@ -22,7 +21,6 @@ class NegociacaoController {
         this._listaNegociacoes.adiciona(this._criaNegociacao());
         this._limpaFormulario();
         console.log(this._listaNegociacoes._negociacoes);
-
    }
 
     _criaNegociacao() {
@@ -41,10 +39,4 @@ class NegociacaoController {
         this._inputValor.value = 0.0;
 
         this._inputData.focus();
-
     }
-}
-
-        //Forma antiga de acessar os inputs
-        // let inputData = document.querySelector('#data');
-        // let inputQuantidade...
