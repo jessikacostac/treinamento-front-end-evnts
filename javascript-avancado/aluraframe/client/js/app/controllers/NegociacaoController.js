@@ -2,25 +2,37 @@
 class NegociacaoController {
 
     constructor() {
-
         //Otimização do código
         //Atribuimos ao $ querySelector para não precisar reescrevar toda vez que precisar acessar o elemento
         //Capturando os valores dos elementos
         //Atributos
         let $ = document.querySelector.bind(document);
+        // debugger; *********** debugar código
         this._inputData = $('#data');
         this._inputQuantidade =  $('#quantidade');
         this._inputValor = $('#valor');
         this._listaNegociacoes = new ListaNegociacoes();
+
+        this._negociacoesView = new NegociacoesView($('#negociacoesView'));
+        this._negociacoesView.update(this._listaNegociacoes);
+
+        this._mensagem =  new Mensagem();
+        this._mensagemView = new MensagemView($("#mensagemView"));
+        this._mensagemView.update(this._mensagem);
+
     }
 
     adiciona(event) {
 
         event.preventDefault();
-        
         this._listaNegociacoes.adiciona(this._criaNegociacao());
+        this._negociacoesView.update(this._listaNegociacoes);
+
+        this._mensagem.texto = "Negociação Adicionada com sucesso!";
+        this._mensagemView.update(this._mensagem);
+        
         this._limpaFormulario();
-        console.log(this._listaNegociacoes._negociacoes);
+        // console.log(this._listaNegociacoes._negociacoes);
    }
 
     _criaNegociacao() {
@@ -40,3 +52,5 @@ class NegociacaoController {
 
         this._inputData.focus();
     }
+
+}
