@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        ///////////////////// 1043 - Triangulo  ////////////////////////////
+
+        // var input = "6 4 2.1";
+        // var lines = input.split('\n');
+
+        var a = 6;
+        var b = 4;
+        var c = 2.1;
+
+        // console.log(lines[0]);
+        // console.log(lines[1]);
+        // console.log(lines[2]);
+
+        function calc(a, b, c) {
+
+            if (a < b + c && b < a + c && c < b + a) {
+                perimetro = a + b + c;
+                return console.log(`Perimetro = ${perimetro.toFixed(1)}`);
+            } else {
+                area = ((a + b) * c) / 2;
+                return console.log(`Area = ${area.toFixed(1)}`);
+            }
+        }
+
+        calc(a, b, c);
+
+        /////////////////////// 1041 - Coordenadas de um ponto  ////////////////////////////
+
+
+
+        var x = 0.0;
+        var y = 0.0;
+
+        function retorna() {
+
+            // const x = Number(lines[0]);
+            // const y = Number(lines[1]);
+
+            if (x === 0 & y === 0) {
+                return console.log("Origem");
+            } else if (x > 0 & y > 0) {
+                return console.log("Q1")
+            } else if (x > 0.0 & y < 0) {
+                return console.log("Q4")
+            } else if (x < 0 & y > 0) {
+                return console.log("Q3")
+            } else if (x < 0 & y < 0) {
+                return console.log("Q2")
+            }
+        }
+
+        retorna(x, y);
+
+        ////////////   1071  - Soma de ímpares  /////////////////
+
+        var numA = 6;
+        var numB = -5;
+        var soma = [];
+        // se numberA % 2 = 0  >>>
+        //fazer for 
+        //push para criar um array com os numeros impares
+
+         console.log(soma);
+
+        function numImpar(numA, numB) {
+            if(numA -1 % 2 !== 0 & numA !== numB) {
+               soma.push(numA -1) 
+            }
+        }
+
+        numImpar(numA, numB);
+
+        console.log(soma);
+
+
+
+
+
+    </script>
+</body>
+
+</html>
