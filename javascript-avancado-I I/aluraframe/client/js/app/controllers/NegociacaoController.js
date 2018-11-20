@@ -11,11 +11,13 @@ class NegociacaoController {
         this._inputData = $('#data');
         this._inputQuantidade =  $('#quantidade');
         this._inputValor = $('#valor');
-        this._listaNegociacoes = new ListaNegociacoes(model =>
+
+        // this._listaNegociacoes = 
+        //     new ListaNegociacoes(model => this._negociacoesView.update(model));
             //Quem é esse model? Vai ser uma instância de ListaNegociacao
             //que vai ser passada para esta function quando for chamada para atualizar o modelo toda vez que for chamado o método adiciona e esvazia
             //Outra opção Reflect apply
-            this._negociacoesView.update(model));
+
 
         this._negociacoesView = new NegociacoesView($('#negociacoesView'));
         this._negociacoesView.update(this._listaNegociacoes);

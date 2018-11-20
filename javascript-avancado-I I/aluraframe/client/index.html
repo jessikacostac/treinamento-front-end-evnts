@@ -60,6 +60,22 @@
         let negociacaoController = new NegociacaoController();
     </script>
 
+    <script>
+        let negociacao =  new Proxy(new Negociacao(new Date(), 1, 100), {
+            //rendler's
+            //armadilha trap
+
+            get: function(target, prop, receiver) {
+                console.log(`A propriedade "${prop}" foi interceptado`);
+                return Reflect.get(target, prop, receiver);
+            }
+        });
+
+
+        console.log(negociacao.quantidade)
+        console.log(negociacao.valor)
+    </script>
+
 
 </body>
 </html>

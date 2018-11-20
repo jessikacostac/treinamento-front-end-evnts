@@ -1,6 +1,7 @@
 class ListaNegociacoes {
     
-    constructor(armadilha) {
+    constructor() {
+        // constructor(armadilha) {
         
         this._negociacoes = [];
         this._armadilha = armadilha;
@@ -11,7 +12,7 @@ class ListaNegociacoes {
     adiciona(negociacao) {
         
         this._negociacoes.push(negociacao);
-        this._armadilha(this);
+        // this._armadilha(this);
         //API de Reflexão do JS
         // Reflect.apply(this._armadilha, this._contexto, [this]);
     }
@@ -23,11 +24,13 @@ class ListaNegociacoes {
 
     esvazia() {
         this._negociacoes = [];
-        this._armadilha(this);
+        // this._armadilha(this);
         // Reflect.apply(this._armadilha, this._contexto, [this]);
     }
 }
 
+
+//Modelo é a parte mais reutilizável do nosso sistema
 
 //function() {}             >>>  Escopo dinâmico - ("this") varia de acordo com o contexto que é chamada.
 
