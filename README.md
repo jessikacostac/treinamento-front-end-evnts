@@ -6,5 +6,7 @@ Treinamento para a carreira de Desenvolvedora Front-End
 |##1             |#1 - HTML/CSS I                    |Revisado                     |
 |##2             |#1 - HTML/CSS II                   |Revisado                     |
 |##3             |#2 - CSS - Flexbox                 |Concluído                    |
-|##4             |#2 - JAVASCRIPT - básico           |Concluído                    |
-|##5             |#2 - CSS - JAVASCRIPT - Avançado   |75%////00%                   |
+|##4             |#3 - JAVASCRIPT - básico           |Concluído                    |
+|##5             |#3 - JAVASCRIPT - Avançado I       |Concluído                    |
+|##6             |#3 - JAVASCRIPT - Avançado II      |Concluído                    |
+|##7             |#3 - JAVASCRIPT - Avançado III     |.............                |
