@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload de arquivo</title>
+</head>
+
+<body>
+    <label>Informações do arquivo</label>
+    <input class="dados-arquivo" placeholder="formato: nome/tamanho/tipo">
+
+    <button onclick="arquivoController.envia()">Enviar</button>
+
+    <!-- <script src="Arquivo.js"></script>
+    <script src="ArquivoController.js"></script> -->
+    <script>
+        //Classe Arquivo Controller
+        class ArquivoController {
+
+            constructor() {
+                this._inputDados = document.querySelector('.dados-arquivo');
+            }
+
+            envia() {
+                let arquivo = ArquivoHelper.cria(this._inputDados.value);
+                console.log(`Dados do arquivo: ${arquivo.nome}, ${arquivo.tamanho}, ${arquivo.tipo}`);
+                this._limpaFormulario();
+            }
+
+            // envia() {
+            //     let dados = this._inputDados.value.split('/').map(item => item.toUpperCase());
+            //     let arquivo = new Arquivo(...dados); // usando spread operator
+            //     console.log(`Dados do arquivo: ${arquivo.nome}, ${arquivo.tamanho}, ${arquivo.tipo}`);
+            //     this._limpaFormulario();
+            // }
+
+            _limpaFormulario() {
+                this._inputDados.value = '';
+                this._inputDados.focus();
+            }
+        }
+    </script>
+    <script>
+        let arquivoController = new ArquivoController();
+
+
+        //Classe Arquivo
+        class Arquivo {
+
+            constructor(nome, tamanho, tipo) {
+                this._nome = nome;
+                this._tamanho = tamanho;
+                this._tipo = tipo;
+            }
+
+            get nome() {
+                return this._nome;
+            }
+
+            get tamanho() {
+                return this._tamanho;
+            }
+
+            get tipo() {
+                return this._tipo;
+            }
+        }
+
+
+        //Classe Helper
+        class ArquivoHelper {
+
+            static cria(informacao) {
+                return new Arquivo(...informacao.toUpperCase().split('/'));
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

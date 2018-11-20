@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+        <!-- Aprendemos neste capítulo a criar proxies, que nada mais são do que objetos mentirosos 
+            que encapsulam outros, mais notadamente objetos do nosso modelo. 
+            Pense em proxies como "cascas" que envolvem objetos. Dentro desse contexto, 
+            só podemos "tocar" os objetos encapsulados passando pelo proxy. 
+            É justamente essa característica que torna o uso desse padrão de projeto tão poderoso. -->
+
+    <script>
+
+        let funcionario = { email: 'abc@abc.com' };
+
+        // Crie um proxy para este objeto, exibindo no console a mensagem "Armadilha aqui", 
+        // toda vez que a propriedade email for lida.
+        let funcionarioProxy = new Proxy(funcionario, {
+
+            get(target, prop, receiver) {
+                console.log('Armadilha aqui!');
+                return Reflect.get(target, prop, receiver);
+            }
+
+        });
+        console.log(funcionarioProxy.email);
+
+
+    </script>
+</body>
+
+</html>

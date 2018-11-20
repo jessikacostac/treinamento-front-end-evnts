@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //--------Class Conta---------------
+        class Conta {
+
+            constructor(saldo) {
+                this._saldo = saldo;
+            }
+
+            get saldo() {
+                return this._saldo;
+            }
+
+            atualiza(taxa) {
+                throw new Error('Você deve sobrescrever o método ');
+            }
+        }
+
+        //--------Class Conta Corrente---------------
+        class ContaCorrente extends Conta {
+
+            atualiza(taxa) {
+                this._saldo = this._saldo + taxa;
+            }
+        }
+
+
+        //--------Class Conta Poupança--------------
+        class ContaPoupanca extends Conta {
+
+            atualiza(taxa) {
+                this._saldo = this._saldo + taxa * 2;
+            }
+        }
+
+        conta1 = new ContaCorrente(200);
+        conta2 = new ContaPoupanca(300);
+        conta1.atualiza(2);
+        conta2.atualiza(3);
+        console.log(conta1.saldo); //202
+        console.log(conta2.saldo); //306
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
