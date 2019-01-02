@@ -1,0 +1,37 @@
+.dados {
+  width: 70%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.dados h2 {
+  font-size: 32px;
+  color: #EF7247;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.dados label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding: 20px 0 0 0;
+}
+
+.dados input {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 10px #48A2A6;
+          box-shadow: 1px 1px 10px #48A2A6;
+  margin-bottom: 20px;
+}
+
+.dados button {
+  display: block;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=dados.css.map */

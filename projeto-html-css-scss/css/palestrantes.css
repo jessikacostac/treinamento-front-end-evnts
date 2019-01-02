@@ -1,0 +1,39 @@
+.palestrantes {
+  background-color: #f7a57f;
+}
+
+.palestrantes .white {
+  color: #ffffff;
+  font-size: 2em;
+  text-align: center;
+  padding: 44px 0 0 0;
+}
+
+.palestrantes .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 44px 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.palestrantes .cards .personalidade {
+  background-color: #ffffff;
+  width: 220px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px 10px;
+  margin: 20px 10px;
+}
+
+.palestrantes .cards .personalidade img {
+  border-radius: 100%;
+  width: 70%;
+  padding: 15px 0;
+}
+/*# sourceMappingURL=palestrantes.css.map */

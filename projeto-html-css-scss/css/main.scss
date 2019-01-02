@@ -1,0 +1,15 @@
+@import 'dados';
+@import 'header';
+@import 'palestrantes';
+@import 'sobre';
+@import 'reset';
+
+.button {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 25px 50px;
+    background-color: #48A3A6;
+    border-radius: 8px;
+}
